@@ -1,0 +1,30 @@
+<section class="content-header">
+    <div class="row">
+        <div class="pull-left">
+            <h4>{{ titulo }} de la cuenta: #{{ nro_cuenta }}<small> </small></h4>
+        </div>
+    </div>
+</section>
+
+<section class="content-header">
+    <div class="row">
+        
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Importe</label>
+                <input type="number" [(ngModel)]="importe" #ctrl="ngModel" class="form-control" placeholder="Importe">
+              </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Glosa</label>
+                <input type="text" [(ngModel)]="glosa" #ctrl="ngModel" class="form-control" placeholder="Glosa">
+              </div>   
+        </div>
+
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-block btn-success" (click)="depositoRetiroByNroCuenta()"><span class="fa fa-plus"></span> REALIZAR TRANSACCION </button>
+          </div>
+      </div>
+</section>

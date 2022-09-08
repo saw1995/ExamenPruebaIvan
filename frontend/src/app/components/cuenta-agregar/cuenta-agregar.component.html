@@ -1,0 +1,51 @@
+<section class="content-header">
+    <div class="row">
+        <div class="pull-left">
+            <h4>Agregar Cuenta<small> </small></h4>
+        </div>
+    </div>
+</section>
+
+<section class="content-header">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Tipo de cuenta</label>
+                <select [(ngModel)]="tipo" #ctrl="ngModel" class="form-control" (change)="change_selecTipo()">
+                    <option value="" disabled selected>Seleccione el tipo de Cuenta</option>
+                    <option value="AHO"> Cuenta de Ahorros</option>
+                    <option value="CTE">Cuenta Corriente</option>
+                </select>
+              </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Tipo de moneda</label>
+                <select [(ngModel)]="moneda" #ctrl="ngModel" class="form-control">
+                    <option value="" disabled selected>Seleccione el tipo de moneda</option>
+                    <option value="BOL"> Bolivianos</option>
+                    <option value="USD">Dolarés</option>
+                </select>
+              </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Nro. de Cuenta</label>
+                <input type="text" [(ngModel)]="nro_cuenta" #ctrl="ngModel" class="form-control" placeholder="Numero de cuenta">
+              </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Titular</label>
+                <input type="text" [(ngModel)]="nombre" #ctrl="ngModel" class="form-control" placeholder="Nombre completo">
+              </div>   
+        </div>
+
+        
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-block btn-success" (click)="agregarCuenta()"><span class="fa fa-plus"></span> AGREGAR CUENTA </button>
+          </div>
+      </div>
+</section>

@@ -1,0 +1,38 @@
+<section class="content-header">
+    <div class="row">
+        <div class="pull-left">
+            <h4>Lista de Cuentas<small> </small></h4>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="text-center">#</th>
+                <th class="text-center">Tipo</th>
+                <th class="text-center">Moneda</th>
+                <th class="text-center">Cuenta</th>
+                <th class="text-center">Titular</th>
+                <th class="text-center">Saldo</th>
+                <th class="text-center">Mov</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cuenta of listaCuenta; let i = index;">
+                <td class="text-center">{{ i+1 }}</td>
+                <td class="text-center">{{ cuenta.tipo }}</td>
+                <td class="text-center">{{ cuenta.moneda }}</td>
+                <td class="text-center">{{ cuenta.nro_cuenta }}</td>
+                <td class="text-center">{{ cuenta.nombre }}</td>
+                <td class="text-center">{{ cuenta.saldo }}</td>
+                <td class="text-center">
+                    <a href="javascript:void(0);" (click)="click_retiro(cuenta.nro_cuenta)" class="btn btn btn-success btn-rounded float-right">Retiro</a> 
+                    <a href="javascript:void(0);" (click)="click_deposito(cuenta.nro_cuenta)" class="btn btn btn-success btn-rounded float-right">Deposito</a> 
+                    <a href="javascript:void(0);" (click)="click_movimientos(cuenta.nro_cuenta)" class="btn btn btn-success btn-rounded float-right">Movimientos</a> 
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</section>

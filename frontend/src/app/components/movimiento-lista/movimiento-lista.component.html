@@ -1,0 +1,29 @@
+<section class="content-header">
+    <div class="row">
+        <div class="pull-left">
+            <h4>Lista de Movimiento de la cuenta: # {{nro_cuenta}}<small> </small></h4>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="text-center">#</th>
+                <th class="text-center">Tipo</th>
+                <th class="text-center">Glosa</th>
+                <th class="text-center">Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movimiento of listaMovimiento; let i = index;">
+                <td class="text-center">{{ i+1 }}</td>
+                <td class="text-center">{{ movimiento.tipo }}</td>
+                <td class="text-center">{{ movimiento.glosa }}</td>
+                <td class="text-center">{{ movimiento.importe }}</td>
+                
+            </tr>
+        </tbody>
+      </table>
+</section>
